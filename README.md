@@ -1,9 +1,9 @@
-# 🚀 OverQualifiedExperience (OQE)
+# 🚀 OverQualifiedException (OQE)
 
 > **⚠️ AVISO IMPORTANTE METAVÉRZICO:**  
 > Este repositorio es una **SÁTIRA ABSOLUTA**. Si ves algo aquí que se parece a las prácticas reales de tu empresa, nuestras más sinceras condolencias.
 
-Bienvenido a **OverQualifiedExperience**, la primera plataforma Web3 / Cloud-Native / AI-Driven / Blockchain-Backed (insertar buzzword aquí) diseñada específicamente para maximizar tu "Misery Index" corporativo.
+Bienvenido a **OverQualifiedException**, la primera plataforma Web3 / Cloud-Native / AI-Driven / Blockchain-Backed (insertar buzzword aquí) diseñada específicamente para maximizar tu "Misery Index" corporativo.
 
 ¿Estás cansado de que te contraten para mantener código legacy en Cobol pero en la entrevista te pidan saber centrar un div en React Server Components usando un Agente LLM cuántico? ¡Este es tu lugar!
 
