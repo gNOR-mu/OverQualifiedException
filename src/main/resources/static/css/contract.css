@@ -19,6 +19,7 @@ body {
     background-color: var(--vortice-inversores) !important;
     color: #ffffff !important;
     font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
 }
 
 .text-gradient {
