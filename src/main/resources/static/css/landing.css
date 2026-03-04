@@ -1,0 +1,358 @@
+/* 
+  Estilos Satíricos para la Landing Page de OverQualifiedException 
+  -- Tema 2026 Web3 / Startup Vende-Humo --
+*/
+
+/* Variables del tema oscuro "Vórtice de Inversores" */
+:root {
+    --vortice-inversores: #09090B;
+    --purpura-galactico: #8B5CF6;
+    --rosa-escalabilidad: #EC4899;
+    --verde-metricas: #10B981;
+}
+
+/* Forzar la oscuridad cósmica corporativa */
+body {
+    background-color: var(--vortice-inversores) !important;
+    color: #ffffff !important;
+    /* BLANCO PURO para máximo contraste */
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--purpura-galactico) 0%, var(--rosa-escalabilidad) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+/* Botón "Comprar Años de Vida" */
+.btn-gradient {
+    background: linear-gradient(135deg, var(--purpura-galactico) 0%, var(--rosa-escalabilidad) 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    color: white;
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.6) !important;
+}
+
+/* Glassmorphism extremo (Cristal Empañado) */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Resplandor hipnótico alrededor de bloques */
+.glow-box {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.1);
+}
+
+/* Acento para Métricas Falsas */
+.text-metric {
+    color: var(--verde-metricas) !important;
+}
+
+.border-metric {
+    border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Toast de FOMO (Modo Oscuro Glass) */
+.toast {
+    background: rgba(15, 15, 20, 0.95) !important;
+    /* Más oscuro para que el texto resalte */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(139, 92, 246, 0.4) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(236, 72, 153, 0.2) !important;
+}
+
+.toast-body {
+    color: #ffffff !important;
+    /* Texto blanco puro */
+}
+
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Efecto de elevación interactivo (Reescrito para fondos oscuros) */
+.hover-lift {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(139, 92, 246, 0.2) !important;
+    border-color: rgba(236, 72, 153, 0.4) !important;
+}
+
+/* --- Animación de Marquee (Ajustado para Noche Oscura) --- */
+.marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.marquee-content {
+    display: flex;
+    flex-shrink: 0;
+    animation: marquee-scroll 30s linear infinite;
+    min-width: 100%;
+}
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    margin: 0 15px;
+    transition: all 0.3s;
+    cursor: help;
+    white-space: nowrap;
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Árbol de habilidades: líneas conectoras tenues */
+.skill-tree-line {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.line-vertical {
+    width: 2px;
+    height: 3rem;
+    left: 50%;
+    bottom: -3rem;
+    transform: translateX(-50%);
+}
+
+/* Logos Parodia (Modo Inversor) */
+.fake-logo {
+    filter: grayscale(100%) brightness(0.7);
+    opacity: 0.8;
+    transition: all 0.4s ease;
+    cursor: default;
+}
+
+.fake-logo:hover {
+    filter: grayscale(0%) brightness(1.2);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Nuevas clases extraídas del HTML */
+.hero-vortex-bg {
+    background: radial-gradient(circle at center top, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+}
+
+.hero-vortex-orb-1 {
+    filter: blur(100px);
+    transform: translate(-20%, -20%);
+    z-index: 0;
+    background-color: var(--purpura-galactico) !important;
+}
+
+.hero-vortex-orb-2 {
+    filter: blur(100px);
+    transform: translate(20%, 20%);
+    z-index: 0;
+    background-color: var(--rosa-escalabilidad) !important;
+}
+
+.vapor-title {
+    letter-spacing: -1px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.vapor-lead {
+    max-width: 700px;
+    font-size: 1.25rem;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+}
+
+.counter-box-container {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.counter-box-label {
+    font-size: 0.75rem !important;
+    letter-spacing: 1px;
+    opacity: 0.85;
+}
+
+.counter-box-number {
+    text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+    font-weight: 900;
+}
+
+.counter-box-sub {
+    font-size: 0.65rem;
+}
+
+.btn-mintear {
+    letter-spacing: 1px;
+}
+
+.link-irrelevante {
+    font-size: 0.85rem;
+    transition: all 0.3s;
+    opacity: 0.7;
+}
+
+.link-irrelevante:hover {
+    opacity: 1;
+    color: #EC4899;
+}
+
+.section-subtitle {
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+.company-vortex-bg {
+    background: var(--purpura-galactico);
+    filter: blur(80px);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.company-desc {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+.marquee-wrapper {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.marquee-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.marquee-icon {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.marquee-icon-metric {
+    text-shadow: 0 0 10px var(--verde-metricas);
+}
+
+.marquee-glow-effect {
+    background: linear-gradient(90deg, var(--purpura-galactico), transparent, var(--verde-metricas));
+    filter: blur(60px);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.skill-tree-container {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.skill-tree-title {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.branch-title {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.node-title {
+    letter-spacing: 1px;
+}
+
+.node-desc {
+    opacity: 0.85;
+    font-size: 0.9rem;
+}
+
+.node-ultimate-bg-warning {
+    background: rgba(139, 92, 246, 0.1) !important;
+}
+
+.node-ultimate-bg-success {
+    background: rgba(16, 185, 129, 0.05) !important;
+}
+
+.testimonials-subtitle {
+    opacity: 0.85;
+}
+
+.testimonial-stars {
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
+}
+
+.testimonial-hash {
+    background: rgba(255, 255, 255, 0.1) !important;
+    opacity: 0.9;
+}
+
+.testimonial-text {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.testimonial-avatar-1 {
+    width: 55px;
+    height: 55px;
+    border-color: var(--purpura-galactico) !important;
+}
+
+.testimonial-avatar-2 {
+    width: 55px;
+    height: 55px;
+    border-color: var(--rosa-escalabilidad) !important;
+}
+
+.testimonial-avatar-gradient-text {
+    background: linear-gradient(to right, #EC4899, #F59E0B);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.testimonial-role-desc {
+    opacity: 0.9;
+}
+
+.testimonial-orb-1 {
+    background: var(--purpura-galactico);
+    filter: blur(50px);
+}
+
+.testimonial-orb-2 {
+    background: var(--rosa-escalabilidad);
+    filter: blur(50px);
+}
+
+.cta-vortex-bg {
+    background: radial-gradient(circle, var(--purpura-galactico) 0%, transparent 60%);
+    filter: blur(60px);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.cta-subtitle {
+    opacity: 0.9;
+}

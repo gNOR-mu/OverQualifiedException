@@ -1,0 +1,150 @@
+/*
+    Estilos del Contrato Satírico Parodia (Hereda de Vaporware 2026)
+*/
+
+/* Importar la base oscura si es necesario, o depender de que layout los cargue juntos.
+   Dado que layout solo carga contract.css y la vista index carga landing.css aparte,
+   es mejor copiar las reglas del theme oscuro para la página aislada del contrato,
+   o hacer que la página del contrato cargue landing.css.
+   Aquí unificaremos re-usando las variables del modo oscuro. */
+
+:root {
+    --vortice-inversores: #09090B;
+    --purpura-galactico: #8B5CF6;
+    --rosa-escalabilidad: #EC4899;
+    --verde-metricas: #10B981;
+}
+
+body {
+    background-color: var(--vortice-inversores) !important;
+    color: #ffffff !important;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--purpura-galactico) 0%, var(--rosa-escalabilidad) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.text-metric {
+    color: var(--verde-metricas) !important;
+}
+
+.skill-tree-container {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.1);
+}
+
+.vapor-title {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cta-vortex-bg {
+    background: radial-gradient(circle, var(--purpura-galactico) 0%, transparent 60%);
+    filter: blur(60px);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.disclaimer-absoluto {
+    font-family: 'Arial', sans-serif;
+}
+
+button.active {
+    /* Estilo adicional cuando el botón se activa mediante JS */
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* --- Global Navbar Vaporware Styles --- */
+.navbar-glass {
+    background: rgba(9, 9, 11, 0.7) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.logo-box {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, var(--purpura-galactico), transparent);
+    border: 1px solid var(--purpura-galactico);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+.nav-link-hover {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.nav-link-hover:hover {
+    opacity: 1;
+    color: var(--rosa-escalabilidad) !important;
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+    transform: translateY(-2px);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+/* Gradiente Vaporware (Copiado de landing.css para uso global en Navbar) */
+.text-gradient-vapor {
+    background: linear-gradient(-45deg,
+            #FFFFFF,
+            #00F0FF,
+            #10B981,
+            #FDE047);
+    background-size: 300% 300%;
+    animation: vapor-shine 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
+    will-change: background-position;
+}
+
+/* Botón "Comprar Años de Vida" (Global) */
+.btn-gradient {
+    background: linear-gradient(135deg, var(--purpura-galactico) 0%, var(--rosa-escalabilidad) 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    color: white;
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.6) !important;
+}
+
+@keyframes vapor-shine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

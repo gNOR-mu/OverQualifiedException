@@ -1,0 +1,95 @@
+<!-- 4. Presentación estilo "Árbol de Habilidades" (Modo Vaporware) -->
+<div th:fragment="skill-tree"
+    class="row my-5 pt-5 pb-5 glass-panel glow-box rounded-5 px-3 px-md-5 mx-0 mx-md-3 relative border-0 skill-tree-container"
+    xmlns:th="http://www.thymeleaf.org">
+    <div class="col-12 text-center mb-5">
+        <h2 class="fw-bold text-white mb-3">
+            <i class="align-middle me-2" style="color: var(--purpura-galactico);">⚡</i> Vector de
+            Habilidades
+        </h2>
+        <p class="text-white skill-tree-subtitle">Sincroniza tu sufrimiento pasivo en
+            el registro inmutable de la oficina.
+        </p>
+    </div>
+
+    <!-- Rama de Supervivencia Base -->
+    <div class="col-md-6 mb-5 mb-md-0 d-flex flex-column align-items-center text-center">
+        <h4 class="mb-5 text-uppercase fw-bold text-white shadow-sm branch-title">Protocolo de Supervivencia
+        </h4>
+
+        <div
+            class="glass-panel border-top-0 border-end-0 border-bottom-0 border-start border-4 border-info rounded-4 p-4 w-75 mb-5 position-relative shadow-sm hover-lift z-2 text-start">
+            <div class="fw-bold text-info mb-2 small text-uppercase node-title">Bloque
+                Nível 1</div>
+            <h5 class="mb-2 fs-6 text-white">Resiliencia a Micro-Management</h5>
+            <small class="text-white node-desc">Reduce en un 5% el daño
+                psicológico del "solo pasaba a ver cómo
+                ibas".</small>
+            <div
+                class="skill-tree-line line-vertical border-start border-1 border-white border-opacity-25 bg-transparent w-auto">
+            </div>
+        </div>
+
+        <div
+            class="glass-panel border-top-0 border-end-0 border-bottom-0 border-start border-4 border-info rounded-4 p-4 w-75 mb-5 position-relative shadow-sm hover-lift z-2 text-start">
+            <div class="fw-bold text-info mb-2 small text-uppercase node-title">Bloque
+                Nivel 2</div>
+            <h5 class="mb-2 fs-6 text-white">Traductor de Requerimientos NLP</h5>
+            <small class="text-white node-desc">Itera mentalmente el
+                enunciado "hazlo como Uber pero para pasear
+                perros" sin causar un stack overflow neuronal.</small>
+            <div
+                class="skill-tree-line line-vertical border-start border-1 border-white border-opacity-25 bg-transparent w-auto">
+            </div>
+        </div>
+
+        <div
+            class="glass-panel border-top-0 border-end-0 border-bottom-0 border-start border-4 border-warning rounded-4 p-4 w-75 position-relative shadow-sm hover-lift z-2 text-start node-ultimate-bg-warning">
+            <div class="fw-bold text-warning mb-2 small text-uppercase">Nivel Ultimate (Gen-Z Bane)</div>
+            <h5 class="mb-2 fs-5 fw-bold text-white">Contestar "Copiado" a las 3:00 AM</h5>
+            <small class="text-white node-desc">Subeje tu wallet de
+                reputación interna al costo de quemar tus
+                receptores de melatonina.</small>
+        </div>
+    </div>
+
+    <!-- Rama Técnica -->
+    <div class="col-md-6 d-flex flex-column align-items-center text-center">
+        <h4 class="mb-5 text-uppercase fw-bold text-white shadow-sm branch-title">Stack Destructivo</h4>
+
+        <div
+            class="glass-panel border-top-0 border-end-0 border-bottom-0 border-start border-4 rounded-4 p-4 w-75 mb-5 position-relative shadow-sm hover-lift z-2 text-start border-metric">
+            <div class="fw-bold text-metric mb-2 small text-uppercase node-title">Bloque
+                Nível 1</div>
+            <h5 class="mb-2 fs-6 text-white">Prompt Engineering Copiloted</h5>
+            <small class="text-white node-desc">Automatiza la toma de malas
+                decisiones arquitectónicas mediante
+                sugerencias tabulares.</small>
+            <div
+                class="skill-tree-line line-vertical border-start border-1 border-white border-opacity-25 bg-transparent w-auto">
+            </div>
+        </div>
+
+        <div
+            class="glass-panel border-top-0 border-end-0 border-bottom-0 border-start border-4 rounded-4 p-4 w-75 mb-5 position-relative shadow-sm hover-lift z-2 text-start border-metric">
+            <div class="fw-bold text-metric mb-2 small text-uppercase node-title">Bloque
+                Nivel 2</div>
+            <h5 class="mb-2 fs-6 text-white">Monolitos Descentralizados</h5>
+            <small class="text-white node-desc">Llama API REST a tus clases
+                locales para fingir que usas
+                microservicios. Otorga +10 de fricción técnica.</small>
+            <div
+                class="skill-tree-line line-vertical border-start border-1 border-white border-opacity-25 bg-transparent w-auto">
+            </div>
+        </div>
+
+        <div
+            class="glass-panel border-top-0 border-end-0 border-bottom-0 border-start border-4 rounded-4 p-4 w-75 position-relative shadow-sm hover-lift z-2 text-start border-metric node-ultimate-bg-success">
+            <div class="fw-bold text-metric mb-2 small text-uppercase">Nivel Ultimate (Architect)</div>
+            <h5 class="mb-2 fs-5 fw-bold text-white">Framework Agnosticism Extremo</h5>
+            <small class="text-white node-desc">Incapacidad total para
+                entregar features por estar refactorizando
+                en Rust para "mejorar el performance".</small>
+        </div>
+    </div>
+</div>

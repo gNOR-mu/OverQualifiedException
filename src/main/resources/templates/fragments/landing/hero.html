@@ -1,0 +1,54 @@
+<!-- 1. Hero Section (Vórtice Infinito) -->
+<div th:fragment="hero" class="text-white text-center py-5 mb-5 w-100 position-relative hero-vortex-bg"
+    xmlns:th="http://www.thymeleaf.org">
+
+    <div class="container py-5 mt-5 position-relative z-1">
+        <span
+            class="badge rounded-pill bg-white bg-opacity-10 border border-light border-opacity-25 text-white mb-4 px-3 py-2 fw-light"
+            style="letter-spacing: 1px;">
+            <span class="text-metric fw-bold">NUEVO:</span> Integración con Algoritmos de Rechazo Cuántico
+        </span>
+
+        <h1 class="display-2 fw-bolder mb-3 lh-sm text-white vapor-title">
+            Disrumpe tu carrera.<br>
+            <span>Abraza el Infinito Corporativo.</span>
+        </h1>
+
+        <p class="lead mb-5 fw-normal text-white mx-auto vapor-lead">
+            Nuestra IA revolucionaria sintetiza años de frustración laboral en certificaciones descentralizadas.
+            Escalabilidad emocional no garantizada.
+        </p>
+
+        <!-- Contador en Vivo de Desgracias (Glass + Acento Verde) -->
+        <div
+            class="glass-panel rounded-4 p-4 d-inline-block shadow-lg mb-5 mx-auto border-metric counter-box-container">
+            <div class="text-uppercase text-white fw-bold mb-2 counter-box-label">
+                Currículums rechazados por la red neuronal:
+            </div>
+            <div class="display-3 fw-black text-metric counter-box-number">14,502</div>
+            <div
+                class="text-metric mt-1 small bg-success bg-opacity-10 rounded-pill d-inline-block px-2 text-uppercase counter-box-sub">
+                Este año
+            </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-4">
+            <a th:href="@{/contract}"
+                class="btn btn-gradient btn-lg px-5 py-3 fw-bold rounded-pill text-uppercase text-white shadow btn-mintear">
+                Mintear mi Contrato
+            </a>
+            <a href="#" class="text-white text-decoration-underline mt-3 mt-sm-0 link-irrelevante"
+                onclick="alert('Demasiado tarde, ya hemos guardado tus cookies y vendido tu información al metaverso.'); return false;">
+                Prefiero ser irrelevante en la Web 3.0
+            </a>
+        </div>
+    </div>
+
+    <!-- Elementos decorativos de fondo (Blur Orbs) -->
+    <div
+        class="position-absolute top-0 start-0 w-50 h-100 rounded-circle bg-primary bg-opacity-10 blur-orb hero-vortex-orb-1">
+    </div>
+    <div
+        class="position-absolute bottom-0 end-0 w-50 h-100 rounded-circle bg-danger bg-opacity-10 blur-orb hero-vortex-orb-2">
+    </div>
+</div>

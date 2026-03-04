@@ -1,0 +1,70 @@
+<!-- 5. Sección de "Social Proof" (Glass cards) -->
+<div th:fragment="testimonials" class="row mt-5 pt-5 mb-5" xmlns:th="http://www.thymeleaf.org">
+    <div class="col-12 text-center mb-5">
+        <h2 class="fw-bold text-white display-6 text-shadow">Validación Sintética</h2>
+        <p class="text-white fs-5 testimonials-subtitle">Testimonios 100% reales (alucinados por nuestro
+            LLM modelo r1-distill).</p>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card glass-panel border-0 hover-lift h-100 p-4 pt-5 rounded-4 relative overflow-hidden">
+            <div
+                class="position-absolute top-0 end-0 bg-gradient opacity-25 w-50 h-50 rounded-circle testimonial-orb-1">
+            </div>
+
+            <div class="d-flex justify-content-between mb-4 position-relative z-1">
+                <div class="text-warning fs-5 testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <span class="badge glass-panel text-white fw-normal testimonial-hash">Hash
+                    #0x4A2...</span>
+            </div>
+            <p class="fs-5 fw-normal text-white flex-grow-1 position-relative z-1 lh-lg testimonial-text">
+                "Compré la
+                suscripción de Seniority. Mágicamente, mi LinkedIn se llenó de reclutadores ofreciendo
+                pagarme en equity que vale cero. ¡Servicio impecable para mi ego!"</p>
+
+            <div
+                class="d-flex align-items-center mt-4 pt-4 border-top border-light border-opacity-10 position-relative z-1">
+                <div
+                    class="glass-panel text-white rounded-circle d-flex align-items-center justify-content-center fw-bold me-3 shadow-lg border-opacity-50 testimonial-avatar-1">
+                    <span class="text-gradient fs-5">0x</span>
+                </div>
+                <div>
+                    <h6 class="mb-1 fw-bold text-white">Tech Bro Criptado</h6>
+                    <span class="small text-metric fw-bold testimonial-role-desc">Liquidated
+                        Developer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div
+            class="card glass-panel border-0 hover-lift h-100 p-4 pt-5 rounded-4 relative overflow-hidden counter-box-container">
+            <div class="position-absolute top-0 end-0 rounded-circle opacity-25 w-50 h-50 testimonial-orb-2">
+            </div>
+
+            <div class="d-flex justify-content-between mb-4 position-relative z-1">
+                <div class="text-warning fs-5 testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <span class="badge glass-panel text-white fw-normal testimonial-hash">Hash
+                    #0xF1B...</span>
+            </div>
+            <p class="fs-5 fw-normal text-white flex-grow-1 position-relative z-1 lh-lg testimonial-text">
+                "Gracias a
+                <span th:text="${storeName}"></span> pude saltarme 5 años de Síndrome del Impostor y pasar directo a
+                sentirme un fraude total como Manager. Totalmente recomendado."
+            </p>
+
+            <div
+                class="d-flex align-items-center mt-4 pt-4 border-top border-light border-opacity-10 position-relative z-1">
+                <div
+                    class="glass-panel text-white rounded-circle d-flex align-items-center justify-content-center fw-bold me-3 shadow-lg border-opacity-50 testimonial-avatar-2">
+                    <span class="testimonial-avatar-gradient-text">FN</span>
+                </div>
+                <div>
+                    <h6 class="mb-1 fw-bold text-white">Fullstack Ninja</h6>
+                    <span class="small text-metric fw-bold testimonial-role-desc">10x Burnout</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

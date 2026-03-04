@@ -1,0 +1,105 @@
+<!-- 2. El Carrusel de Skills (Neon Marquee) -->
+<div th:fragment="marquee" class="row mb-5 pb-5 py-4" xmlns:th="http://www.thymeleaf.org">
+    <div class="col-12 text-center mb-5">
+        <h2 class="fw-bold display-6 mb-3 text-white">Tecnologías <span class="text-gradient">Sobrevaloradas</span>
+        </h2>
+        <p class="text-white font-monospace marquee-subtitle">> Añade buzzwords a
+            tu CV sin
+            entender absolutamente nada del stack.</p>
+    </div>
+
+    <div class="col-12 px-0 position-relative">
+        <!-- Glow de fondo cósmico -->
+        <div class="position-absolute top-50 start-50 translate-middle w-100 h-100 rounded-pill marquee-glow-effect">
+        </div>
+
+        <div
+            class="marquee-container py-4 border-top border-bottom border-light border-opacity-10 position-relative z-1 marquee-wrapper">
+
+            <!-- Grupo 1 -->
+            <div class="marquee-content gap-3 px-3">
+                <div class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Incluye 2 años de experiencia configurando dependencias de Maven.">
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">☕</span>
+                    Java 21
+                </div>
+
+                <div class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Atención: Centrar un div requiere la compra del Token nativo.">
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">🎨</span>
+                    Tailwind CSS
+                </div>
+
+                <div class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm border-metric"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Garantiza que la empresa te contratará solo para hacer consultas SQL en Excel.">
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px var(--verde-metricas);">🤖</span>
+                    Agentes LLM
+                </div>
+
+                <div class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Tu framework de frontend estará obsoleto mañana por la tarde.">
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">⚛️</span>
+                    React Server Components
+                </div>
+
+                <div class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title='"En mi máquina funcionaba antes de que se quedara sin RAM".'>
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">🐳</span>
+                    Kubernetes
+                </div>
+
+                <div class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Despides a 3 sysadmins, instalas Github Actions y te subes el sueldo.">
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">♾️</span>
+                    Cloud Native
+                </div>
+            </div>
+
+            <!-- Grupo 2 (Duplicado idéntico para el scroll infinito) -->
+            <div class="marquee-content gap-3 px-3">
+                <div
+                    class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm">
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">☕</span>
+                    Java 21
+                </div>
+
+                <div
+                    class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm">
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">🎨</span>
+                    Tailwind CSS
+                </div>
+
+                <div
+                    class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm border-metric">
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px var(--verde-metricas);">🤖</span>
+                    Agentes LLM
+                </div>
+
+                <div
+                    class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm">
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">⚛️</span>
+                    React Server Components
+                </div>
+
+                <div
+                    class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm">
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">🐳</span>
+                    Kubernetes
+                </div>
+
+                <div
+                    class="marquee-item d-inline-flex align-items-center justify-content-center glass-panel rounded-pill px-5 py-3 text-white fw-bold shadow-sm">
+                    <span class="fs-4 me-3" style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">♾️</span>
+                    Cloud Native
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

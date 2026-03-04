@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title th:text="'Inicio - ' + ${storeName}">Inicio - OverQualifiedException</title>
+</head>
+
+<body th:replace="~{fragments/layout :: layout(~{::title}, ~{::section})}">
+    <section>
+
+        <!-- Importar CSS de Landing dinámicamente -->
+        <link rel="stylesheet" th:href="@{/css/landing.css}" />
+
+        <!-- Contenedor FOMO: Toast Container nativo de Bootstrap adaptado a oscuro en CSS -->
+        <div id="fomo-popups-container" class="toast-container position-fixed bottom-0 start-0 p-3"
+            style="z-index: 1050"></div>
+
+        <!-- 1. Hero Section -->
+        <div th:replace="~{fragments/landing/hero :: hero}"></div>
+        <div class="container my-5 pb-2 position-relative z-1">
+            <!-- 6. Empresas que confían en nosotros (Logos) -->
+            <div th:replace="~{fragments/landing/logos :: logos}"></div>
+        </div>
+
+        <!-- 2. Carrusel de Skills (Marquee, full viewport width) -->
+        <div class="w-100 overflow-hidden position-relative z-1">
+            <div th:replace="~{fragments/landing/marquee :: marquee}"></div>
+        </div>
+
+        <!-- Contenedor general para el resto del contenido -->
+        <div class="container mb-5 pb-5 position-relative z-1">
+            <!-- 4. Árbol de Habilidades -->
+            <div th:replace="~{fragments/landing/skill-tree :: skill-tree}"></div>
+
+            <!-- 5. Social Proof (Testimonials) -->
+            <div th:replace="~{fragments/landing/testimonials :: testimonials}"></div>
+
+            <!-- CTA Final -->
+            <div th:replace="~{fragments/landing/cta :: cta}"></div>
+
+        </div>
+
+        <!-- Importar JS de Landing dinámicamente -->
+        <script th:src="@{/js/landing.js}"></script>
+
+    </section>
+</body>
+
+</html>

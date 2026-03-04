@@ -1,0 +1,51 @@
+<!-- Navbar Satírica (Tema Vaporware / Web3) -->
+<nav th:fragment="navbar" class="navbar navbar-expand-lg fixed-top navbar-glass py-3"
+    xmlns:th="http://www.thymeleaf.org">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" th:href="@{/}">
+            <div class="logo-box me-2 d-flex justify-content-center align-items-center text-white fw-bold">
+                O<span class="text-metric">Q</span>E
+            </div>
+            <span class="fw-bolder text-white vapor-title d-none d-sm-block">
+                OverQualified<span class="text-gradient-vapor ms-1">Experience</span>
+            </span>
+        </a>
+
+        <!-- Toggle Button for Mobile -->
+        <button class="navbar-toggler border-0 shadow-none focus-ring-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarVapor" aria-controls="navbarVapor" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="text-white fs-3">☰</span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarVapor">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-3">
+                <li class="nav-item">
+                    <a class="nav-link text-white nav-link-hover" aria-current="page" th:href="@{/}">
+                        <span class="text-metric me-1">01.</span> Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white nav-link-hover" href="#"
+                        onclick="alert('Esta sección está bloqueada hasta que consigas 3 estrellas en Github.'); return false;">
+                        <span class="text-metric me-1">02.</span> Vision
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white nav-link-hover" href="#"
+                        onclick="alert('Nuestros inversores no nos dejan revelar el roadmap.'); return false;">
+                        <span class="text-metric me-1">03.</span> Roadmap
+                    </a>
+                </li>
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                    <a th:href="@{/contract}"
+                        class="btn btn-gradient btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase d-block d-lg-inline-block">
+                        Burnout dApp
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
