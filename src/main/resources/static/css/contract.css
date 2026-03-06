@@ -41,6 +41,17 @@ body {
     color: var(--verde-metricas) !important;
 }
 
+::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+    opacity: 1 !important;
+    /* Firefox defaults to lower opacity */
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+    opacity: 1 !important;
+}
+
 .skill-tree-container {
     background: rgba(255, 255, 255, 0.05) !important;
     border: 1px solid rgba(255, 255, 255, 0.08);
