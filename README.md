@@ -36,6 +36,11 @@ OQE es una aplicación Spring Boot MVC falsa que parodia sin piedad:
 
 *Ningún desarrollador Junior fue lastimado en la creación de esta sátira. Sin embargo, varios desarrolladores Senior reportaron flashbacks de estrés postraumático al diseñar la sección "Agentes LLM garantizan que solo harás SQL en Excel".*
 
+## 📸 Capturas
+
+![Captura de pantalla](images/cap1.png)
+![Captura de pantalla](images/cap2.png)
+ 
 ## Aún no está listo
 Actualmente es un mockup payasístico rídiculo que pretende ser una plataforma real, a medida que se implementen **features** reales, se irá haciendo más realista y vibecodeado, porque ¿qué mejor que un código vibe codeado para mostrar las falencias de la actualidad? (Nota: Alrededor del 99.9% de este código fue generado por una IA mientras el "Tech Lead" tomaba matcha latte, abrazando así la verdadera automatización corporativa). - Dev
 
