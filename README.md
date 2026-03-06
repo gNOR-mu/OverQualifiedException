@@ -41,10 +41,11 @@ Actualmente es un mockup payasístico rídiculo que pretende ser una plataforma 
 Cualquier error de arquitectura, código espagueti con inconsistencias, o vulnerabilidades críticas de seguridad **NO** son bugs ni fallas de planificación. Son *features* intencionales diseñadas para probar la resiliencia mental de la comunidad. Se espera que estas decisiones de diseño sean aplaudidas y felicitadas efusivamente en la sección de *Issues* de GitHub.
 
 ## TODO
-- [ ] Conexión a Base de Datos PostgreSQL hiper-relacional para guardar esquemas inflexibles de tu burnout.
+- [OK] Conexión a Base de Datos en memoria hiper-relacional para guardar esquemas inflexibles de tu burnout.
 - [ ] Añadir más "Dark Patterns" de diseño visual (botones que cambian de lugar cuando intentas cancelar).
 - [ ] Expandir el Árbol de Skills Ficticias (Añadir rama "Agile Scrum Master Ceremonial").
 - [ ] Aumentar la cuota de mensajes dolorosos de FOMO en los popups.
 - [ ] Introducir Bugs de Concurrencia a propósito para "generar sinergia en el equipo de QA".
 - [ ] Implementar un loader infinito (skeleton loading) que nunca resuelva para fingir "procesamiento cuántico pesado".
 - [ ] Implementar un loader finito con tiempo de ejecución artificial para que los usuarios no piensen que está malo porque carga muy rápido.
+- [ ] Añadir Javadoc
