@@ -40,15 +40,30 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white nav-link-hover" th:href="@{/login}">
-                        <span class="text-metric me-1">04.</span> Conectar Wallet
+                    <a class="nav-link text-white nav-link-hover" th:href="@{/contract}">
+                        <span class="text-metric me-1">04.</span> Burnout dApp
                     </a>
                 </li>
-                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                    <a th:href="@{/contract}"
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0" th:if="${session.customer == null}">
+                    <a th:href="@{/login}"
                         class="btn btn-gradient btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase d-block d-lg-inline-block">
-                        Burnout dApp
+                        Conectar Wallet
                     </a>
+                </li>
+                <li class="nav-item dropdown ms-lg-3 mt-3 mt-lg-0" th:if="${session.customer != null}">
+                    <a class="btn glass-panel btn-sm px-4 py-2 rounded-pill fw-bold text-white d-block d-lg-inline-block dropdown-toggle"
+                        href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="text-metric">●</span> <span th:text="${session.customer.nickname}">Anon</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end glass-panel border-secondary border-opacity-25 mt-2">
+                        <li><a class="dropdown-item text-white-50" href="#">Progreso de Burnout</a></li>
+                        <li><a class="dropdown-item text-white-50" href="#">KPIs Mensuales</a></li>
+                        <li>
+                            <hr class="dropdown-divider border-secondary border-opacity-25">
+                        </li>
+                        <li><a class="dropdown-item text-danger fw-bold" th:href="@{/logout}">Desconectar
+                                Neural-Link</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>

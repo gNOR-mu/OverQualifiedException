@@ -19,6 +19,7 @@ OQE es una aplicación Spring Boot MVC falsa que parodia sin piedad:
 - **Frontend:** Thymeleaf + Bootstrap 5. "Optimizamos" Bootstrap sobrescribiéndolo con CSS puro que simula vórtices cósmicos de inversores.
 - **Micro-Animaciones:** CSS puro. Tan eficientes que aceleran tu GPU para simular que estás minando crypto.
 - **Lógica de FOMO:** Vanilla JS. Implementamos notificaciones falsas ("Tú ex-compañero acaba de ser promovido por robarse tu idea") para inyectarte ansiedad en tiempo real.
+- **Agente LLM:** El primero que se cruce para seguir alimentando al monstruo con código espagueti.
 
 ## 🚀 Cómo correr esto (Bajo tu propio riesgo psicológico)
 1. Asegúrate de tener al menos 32GB de RAM (es broma, con 2GB basta, pero así lo diría un anuncio real).

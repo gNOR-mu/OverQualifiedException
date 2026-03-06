@@ -3,11 +3,13 @@
 
 <head>
     <title th:text="'Conectar Wallet - ' + ${storeName}">Autenticación - OverQualifiedException</title>
+
+    <link rel="stylesheet" th:href="@{/css/landing.css}" />
 </head>
 
 <body th:replace="~{fragments/layout :: layout('Integración de Identidad', ~{::section})}">
     <section class="min-vh-100 d-flex align-items-center position-relative overflow-hidden py-5 pt-mt-5 hero-vortex-bg">
-        
+
         <!-- Orbes de fondo extraídos de landing -->
         <div class="position-absolute top-0 start-0 w-50 h-100 rounded-circle hero-vortex-orb-1 opacity-50"></div>
         <div class="position-absolute bottom-0 end-0 w-50 h-100 rounded-circle hero-vortex-orb-2 opacity-50"></div>
@@ -17,26 +19,34 @@
                 <div class="col-lg-10 col-xl-8">
                     <!-- Glass Panel Principal -->
                     <div class="glass-panel rounded-5 p-4 p-md-5 glow-box">
-                        
+
                         <div class="text-center mb-5">
-                            <span class="badge border border-info text-info bg-info bg-opacity-10 rounded-pill px-3 py-2 mb-3">
+                            <span
+                                class="badge border border-info text-info bg-info bg-opacity-10 rounded-pill px-3 py-2 mb-3">
                                 Web3 ID Protocol v4.0.1
                             </span>
                             <h2 class="display-5 fw-bolder text-white vapor-title">
                                 Sincroniza tu <span class="text-gradient-vapor">Miseria.</span>
                             </h2>
-                            <p class="text-white-50 mt-3">Para asegurar el máximo alineamiento cultural, requerimos inyectar cookies directamente a tu córtex prefrontal.</p>
+                            <p class="text-white-50 mt-3">Para asegurar el máximo alineamiento cultural, requerimos
+                                inyectar cookies directamente a tu córtex prefrontal.</p>
                         </div>
 
                         <!-- Pestañas de Navegación -->
                         <ul class="nav nav-pills nav-justified mb-4" id="authTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active glass-panel border-0 text-white rounded-start-pill py-3" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">
+                                <button class="nav-link glass-panel border-0 text-white rounded-start-pill py-3"
+                                    th:classappend="${activeTab == null || activeTab == 'login'} ? 'active' : ''"
+                                    id="login-tab" type="button" role="tab" aria-controls="login"
+                                    th:aria-selected="${activeTab == null || activeTab == 'login'}">
                                     <span class="text-metric fw-bold me-2">01.</span> Validar Existencia (Sign In)
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link glass-panel border-0 text-white rounded-end-pill py-3" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">
+                                <button class="nav-link glass-panel border-0 text-white rounded-end-pill py-3"
+                                    th:classappend="${activeTab == 'register'} ? 'active' : ''" id="register-tab"
+                                    type="button" role="tab" aria-controls="register"
+                                    th:aria-selected="${activeTab == 'register'}">
                                     <span class="text-gradient fw-bold me-2">02.</span> Mintear Alma (Sign Up)
                                 </button>
                             </li>
@@ -44,82 +54,111 @@
 
                         <!-- Contenido de las Pestañas -->
                         <div class="tab-content mt-4" id="authTabContent">
-                            
+
                             <!-- TAB LOGIN -->
-                            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                                <form onsubmit="alert('Error 503: Tu nivel de estrés no es suficientemente alto para ingresar.'); return false;">
+                            <div class="tab-pane fade"
+                                th:classappend="${activeTab == null || activeTab == 'login'} ? 'show active' : ''"
+                                id="login" role="tabpanel" aria-labelledby="login-tab">
+                                <div th:if="${loginError}"
+                                    class="alert alert-danger text-center bg-dark border-danger text-danger glass-panel mb-4"
+                                    th:text="${loginError}"></div>
+                                <form th:action="@{/login}" method="post">
                                     <div class="mb-4">
-                                        <label for="loginEmail" class="form-label text-white-50 small text-uppercase fw-bold letter-spacing-1">Email Descentralizado Corporativo</label>
+                                        <label for="loginNickname"
+                                            class="form-label text-white-50 small text-uppercase fw-bold letter-spacing-1">Alias
+                                            / Nickname Descentralizado</label>
                                         <div class="input-group glass-panel rounded-3 overflow-hidden">
-                                            <span class="input-group-text bg-transparent border-0 text-white-50">@</span>
-                                            <input type="email" class="form-control bg-transparent border-0 text-white shadow-none" id="loginEmail" placeholder="tu.esclavo@empresa.io" required>
+                                            <span
+                                                class="input-group-text bg-transparent border-0 text-white-50">@</span>
+                                            <input type="text" name="nickname"
+                                                class="form-control bg-transparent border-0 text-white shadow-none"
+                                                id="loginNickname" placeholder="cripto_bro_99" required>
                                         </div>
                                     </div>
                                     <div class="mb-4">
-                                        <label for="loginPass" class="form-label text-white-50 small text-uppercase fw-bold letter-spacing-1">Hash de Frustración (Password)</label>
+                                        <label for="loginPass"
+                                            class="form-label text-white-50 small text-uppercase fw-bold letter-spacing-1">Hash
+                                            de Frustración (Password)</label>
                                         <div class="input-group glass-panel rounded-3 overflow-hidden">
-                                            <span class="input-group-text bg-transparent border-0 text-white-50">#</span>
-                                            <input type="password" class="form-control bg-transparent border-0 text-white shadow-none" id="loginPass" placeholder="••••••••••••" required>
+                                            <span
+                                                class="input-group-text bg-transparent border-0 text-white-50">#</span>
+                                            <input type="password" name="password"
+                                                class="form-control bg-transparent border-0 text-white shadow-none"
+                                                id="loginPass" placeholder="••••••••••••" required>
                                         </div>
-                                    </div>
-                                    
-                                    <div class="d-flex justify-content-between align-items-center mb-5">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input bg-dark border-secondary" type="checkbox" role="switch" id="rememberMisery" checked>
-                                            <label class="form-check-label text-white-50 small" for="rememberMisery">Recordar mi trauma</label>
-                                        </div>
-                                        <a href="#" class="text-metric small text-decoration-none" onclick="alert('Lamentablemente, si lo olvidaste, RRHH no te cree.'); return false;">¿Olvidaste tu seed phrase?</a>
                                     </div>
 
-                                    <button type="submit" class="btn btn-gradient w-100 py-3 rounded-3 fw-bold text-uppercase hover-lift">
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input bg-dark border-secondary" type="checkbox"
+                                                role="switch" id="rememberMisery" checked>
+                                            <label class="form-check-label text-white-50 small"
+                                                for="rememberMisery">Recordar mi trauma</label>
+                                        </div>
+                                        <a href="#" class="text-metric small text-decoration-none"
+                                            onclick="alert('Lamentablemente, si lo olvidaste, RRHH no te cree.'); return false;">¿Olvidaste
+                                            tu seed phrase?</a>
+                                    </div>
+
+                                    <button type="submit"
+                                        class="btn btn-gradient w-100 py-3 rounded-3 fw-bold text-uppercase hover-lift">
                                         Conectar Wallet & Continuar
                                     </button>
-                                    
+
                                     <div class="text-center mt-4 border-top border-secondary border-opacity-25 pt-4">
                                         <span class="text-white-50 small">O arruina tu privacidad usando:</span>
                                         <div class="d-flex gap-3 justify-content-center mt-3">
-                                            <button type="button" class="btn glass-panel text-white flex-grow-1 hover-lift" onclick="alert('Redireccionando a la máquina cosechadora de datos de Google...');">Google</button>
-                                            <button type="button" class="btn glass-panel text-white flex-grow-1 hover-lift" onclick="alert('Error: Github determinó que tienes muy pocos cuadritos verdes en tu historial de commits.');">Github</button>
+                                            <button type="button"
+                                                class="btn glass-panel text-white flex-grow-1 hover-lift"
+                                                onclick="alert('Redireccionando a la máquina cosechadora de datos de Google...');">Google</button>
+                                            <button type="button"
+                                                class="btn glass-panel text-white flex-grow-1 hover-lift"
+                                                onclick="alert('Error: Github determinó que tienes muy pocos cuadritos verdes en tu historial de commits.');">Github</button>
                                         </div>
                                     </div>
                                 </form>
                             </div>
 
-                            <!-- TAB REGISTER -->
-                            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-                                <form onsubmit="alert('Felicidades, acabas de ceder el 120% de tus derechos de imagen para nuestros deepfakes corporativos de marketing.'); return false;">
-                                    <div class="row mb-3">
-                                        <div class="col-md-6 mb-3 mb-md-0">
-                                            <label class="form-label text-white-50 small text-uppercase fw-bold letter-spacing-1">Id Biométrica (Nombre)</label>
-                                            <input type="text" class="form-control glass-panel bg-transparent border border-secondary border-opacity-25 text-white shadow-none rounded-3 py-2" placeholder="John" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label text-white-50 small text-uppercase fw-bold letter-spacing-1">Fork Genético (Apellido)</label>
-                                            <input type="text" class="form-control glass-panel bg-transparent border border-secondary border-opacity-25 text-white shadow-none rounded-3 py-2" placeholder="Doe" required>
-                                        </div>
-                                    </div>
-                                    
+                            <div class="tab-pane fade" th:classappend="${activeTab == 'register'} ? 'show active' : ''"
+                                id="register" role="tabpanel" aria-labelledby="register-tab">
+                                <div th:if="${registerError}"
+                                    class="alert alert-danger text-center bg-dark border-danger text-danger glass-panel mb-4"
+                                    th:text="${registerError}"></div>
+                                <form th:action="@{/register}" method="post">
                                     <div class="mb-3">
-                                        <label class="form-label text-white-50 small text-uppercase fw-bold letter-spacing-1">Canal de Spam (Email)</label>
-                                        <input type="email" class="form-control glass-panel bg-transparent border border-secondary border-opacity-25 text-white shadow-none rounded-3 py-2" placeholder="desarrollador_desesperado@gmail.com" required>
+                                        <label
+                                            class="form-label text-white-50 small text-uppercase fw-bold letter-spacing-1">Id
+                                            Biométrica (Nickname)</label>
+                                        <input type="text" name="nickname"
+                                            class="form-control glass-panel bg-transparent border border-secondary border-opacity-25 text-white shadow-none rounded-3 py-2"
+                                            placeholder="anonimo_satoshi_1" required>
                                     </div>
-                                    
+
                                     <div class="mb-4">
-                                        <label class="form-label text-white-50 small text-uppercase fw-bold letter-spacing-1">Stake de Seguridad (Password)</label>
-                                        <input type="password" class="form-control glass-panel bg-transparent border border-secondary border-opacity-25 text-white shadow-none rounded-3 py-2" placeholder="Debe contener 1 LLM, 2 Smart Contracts y 1 lágrima" required>
+                                        <label
+                                            class="form-label text-white-50 small text-uppercase fw-bold letter-spacing-1">Stake
+                                            de Seguridad (Password)</label>
+                                        <input type="password" name="password"
+                                            class="form-control glass-panel bg-transparent border border-secondary border-opacity-25 text-white shadow-none rounded-3 py-2"
+                                            placeholder="Debe contener 1 LLM, 2 Smart Contracts y 1 lágrima" required>
                                         <div class="form-text text-warning small mt-2 opacity-75">
                                             * Al registrarte aceptas trabajar en Sprints de 2 horas.
                                         </div>
                                     </div>
 
                                     <div class="form-check mb-4">
-                                        <input class="form-check-input bg-dark border-secondary" type="checkbox" value="" id="termsCheck" required>
+                                        <input class="form-check-input bg-dark border-secondary" type="checkbox"
+                                            value="" id="termsCheck" required>
                                         <label class="form-check-label text-white-50 small" for="termsCheck">
-                                            He leído y firmo con sangre el <a href="#" class="text-metric">Contrato de Esclavitud Moderna (Smart Contract)</a>.
+                                            He leído y firmo con sangre el <a th:href="@{/contract}" target="_blank"
+                                                class="text-metric">Contrato de
+                                                Esclavitud Moderna (Smart Contract)</a>.
                                         </label>
                                     </div>
 
-                                    <button type="submit" class="btn btn-outline-light border-metric text-metric w-100 py-3 rounded-3 fw-bold text-uppercase hover-lift" style="background: rgba(16, 185, 129, 0.1);">
+                                    <button type="submit"
+                                        class="btn btn-outline-light border-metric text-metric w-100 py-3 rounded-3 fw-bold text-uppercase hover-lift"
+                                        style="background: rgba(16, 185, 129, 0.1);">
                                         Desplegar Identidad en la Mainnet
                                     </button>
                                 </form>
@@ -127,7 +166,7 @@
 
                         </div>
                     </div>
-                    
+
                     <div class="text-center mt-4">
                         <p class="text-white-50 small">
                             Protegido por Criptografía Cuántica y <br>
@@ -138,12 +177,40 @@
                 </div>
             </div>
         </div>
+
+        <!-- Script manual para pestañas ya que Bootstrap a veces falla al inyectar fragmentos HTML -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const loginTab = document.getElementById('login-tab');
+                const registerTab = document.getElementById('register-tab');
+                const loginPane = document.getElementById('login');
+                const registerPane = document.getElementById('register');
+
+                if (loginTab && registerTab && loginPane && registerPane) {
+                    loginTab.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        // Activar boton login
+                        loginTab.classList.add('active');
+                        registerTab.classList.remove('active');
+                        // Mostrar form login
+                        loginPane.classList.add('show', 'active');
+                        registerPane.classList.remove('show', 'active');
+                    });
+
+                    registerTab.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        // Activar boton register
+                        registerTab.classList.add('active');
+                        loginTab.classList.remove('active');
+                        // Mostrar form register
+                        registerPane.classList.add('show', 'active');
+                        loginPane.classList.remove('show', 'active');
+                    });
+                }
+            });
+        </script>
     </section>
 
-    <!-- Adicional script solo para esta vista, si hiciera falta. 
-         Aunque Bootstrap maneja las pills. -->
-    <script>
-        // Fake background animation initialization ya es manejada por CSS de hero-vortex
-    </script>
 </body>
+
 </html>
