@@ -1,9 +1,0 @@
-services:
-  postgres:
-    build: .
-    environment:
-      - 'POSTGRES_DB=job_market_db'
-      - 'POSTGRES_PASSWORD=unpaid_internship'
-      - 'POSTGRES_USER=junior_developer'
-    ports:
-      - '5432:5432'
